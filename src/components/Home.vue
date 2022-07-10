@@ -79,4 +79,10 @@ const mainClick = () => {
 .innerForm {
   height: 100%;
 }
+.innerForm div.common-layout {
+  height: 100%;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+}
 </style>

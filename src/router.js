@@ -28,7 +28,7 @@ const router = createRouter({
         { path: "HelloWorld", component: HelloWorld },
         { path: "UserQuery", component: UserQuery },
         { path: "WangEditTest", component: WangEditTest },
-        { path: "VueStudy/Reactive", component: import("./components/VueStudy/Reactive.vue")  },
+        { path: "VueStudy/Reactive", component: import("./components/VueStudy/ReactiveTest.vue")  },
       ],
     },
   ],

@@ -28,28 +28,28 @@ import { ref, onMounted } from "vue";
 import { Search } from "@element-plus/icons-vue";
 import { useStore } from "vuex";
 const store = useStore();
-onMounted(() => {
-  if (
-    store.state.editableTabs.length == 0 ||
-    store.state.editableTabsValue == "/Home"
-  ) {
-    var bol=true
-    store.state.activeMenuCap = "用户查询";
-    store.state.rPath = "/Home/UserQuery";
-    store.state.editableTabs.forEach((item,index)=>{
-			if (item.name==store.state.rPath){
-				store.state.editableTabsValue = item.name
-				bol=false
-				return
-			}
-		})
-		if (bol){
-			store.commit('addTab')
-		}
-  } else {
-    store.state.editableTabsValue = "/Home/UserQuery";
-  }
-});
+// onMounted(() => {
+//   if (
+//     store.state.editableTabs.length == 0 ||
+//     store.state.editableTabsValue == "/Home"
+//   ) {
+//     var bol=true
+//     store.state.activeMenuCap = "用户查询";
+//     store.state.rPath = "/Home/UserQuery";
+//     store.state.editableTabs.forEach((item,index)=>{
+// 			if (item.name==store.state.rPath){
+// 				store.state.editableTabsValue = item.name
+// 				bol=false
+// 				return
+// 			}
+// 		})
+// 		if (bol){
+// 			store.commit('addTab')
+// 		}
+//   } else {
+//     store.state.editableTabsValue = "/Home/UserQuery";
+//   }
+// });
 const tableData = ref([]);
 const userName = ref("");
 function QueryUser() {
@@ -89,9 +89,4 @@ QueryUser();
     width: 40vw;
   }
 }
-.common-layout{
-		height: 100%;
-  background-color: white;
-  border-radius: 10px;
-	}
 </style>

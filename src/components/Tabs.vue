@@ -43,6 +43,8 @@ const removeTab = (targetName: string) => {
   }
 };
 const changeTab = (targetName: string) => {
+  console.log(targetName)
+  console.log(store.state.editableTabsValue)
   router.push(store.state.editableTabsValue);
 };
 </script>

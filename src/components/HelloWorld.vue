@@ -60,28 +60,28 @@
 import { reactive, onMounted } from "vue";
 import { useStore } from "vuex";
 const store = useStore();
-onMounted(() => {
-  if (
-    store.state.editableTabs.length == 0 ||
-    store.state.editableTabsValue == "/Home"
-  ) {
-		var bol=true
-    store.state.activeMenuCap = "表单页";
-    store.state.rPath = "/Home/HelloWorld";
-    store.state.editableTabs.forEach((item,index)=>{
-			if (item.name==store.state.rPath){
-				store.state.editableTabsValue = item.name
-				bol=false
-				return
-			}
-		})
-		if (bol){
-			store.commit('addTab')
-		}
-  } else {
-    store.state.editableTabsValue = "/Home/HelloWorld";
-  }
-});
+// onMounted(() => {
+//   if (
+//     store.state.editableTabs.length == 0 ||
+//     store.state.editableTabsValue == "/Home"
+//   ) {
+// 		var bol=true
+//     store.state.activeMenuCap = "表单页";
+//     store.state.rPath = "/Home/HelloWorld";
+//     store.state.editableTabs.forEach((item,index)=>{
+// 			if (item.name==store.state.rPath){
+// 				store.state.editableTabsValue = item.name
+// 				bol=false
+// 				return
+// 			}
+// 		})
+// 		if (bol){
+// 			store.commit('addTab')
+// 		}
+//   } else {
+//     store.state.editableTabsValue = "/Home/HelloWorld";
+//   }
+// });
 // do not use same name with ref
 const form = reactive({
   name: "",
